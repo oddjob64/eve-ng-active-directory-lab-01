@@ -1,5 +1,5 @@
 #Import Active Directory Module
-Import-module activedirectory
+Import-Module ActiveDirectory
 
 #Autopopulate Domain
 $dnsDomain =gc env:USERDNSDOMAIN
@@ -17,7 +17,7 @@ $dummyPassword = ConvertTo-SecureString -AsPlainText "P@ss1W0Rd!" -Force
 $counter = 0
 
 #import CSV File
-$ImportFile = Import-csv "$dirpath\BillingsUtility_ADUsers.csv"
+$ImportFile = Import-CSV "$dirpath\Tynetlabs_ADUsers.csv"
 $TotalImports = $importFile.Count
 
 #Create Users
